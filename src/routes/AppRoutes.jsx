@@ -1,96 +1,52 @@
 import { Routes, Route } from "react-router-dom";
 
+// Pages
 import Home from "../pages/Home";
 import Marketplace from "../pages/Marketplace";
-import Login from "../pages/Login";
-import Register from "../pages/Register";
-import Dashboard from "../pages/Dashboard";
-import BuyerDashboard from "../pages/BuyerDashboard";
-import MyOrders from "../pages/MyOrders";
-import FarmerOrders from "../pages/FarmerOrders";
 import ProductDetails from "../pages/ProductDetails";
-import Cart from "../pages/Cart";
-import Checkout from "../pages/Checkout";
-import Analytics from "../pages/Analytics";
+import Dashboard from "../pages/Dashboard";
 import Weather from "../pages/Weather";
 import AIAssistant from "../pages/AIAssistant";
-import AdminDashboard from "../pages/AdminDashboard";
+import About from "../pages/About";
+import Contact from "../pages/Contact";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import NotFound from "../pages/NotFound";
+import DiseaseDetection from "../pages/DiseaseDetection";
 
 function AppRoutes() {
   return (
     <Routes>
+
+      {/* Home */}
       <Route path="/" element={<Home />} />
 
-      <Route
-        path="/marketplace"
-        element={<Marketplace />}
-      />
+      {/* Marketplace */}
+      <Route path="/marketplace" element={<Marketplace />} />
+      <Route path="/product/:id" element={<ProductDetails />} />
 
-      <Route
-        path="/login"
-        element={<Login />}
-      />
+      {/* Dashboard */}
+      <Route path="/dashboard" element={<Dashboard />} />
 
-      <Route
-        path="/register"
-        element={<Register />}
-      />
+      {/* AI & Weather */}
+      <Route path="/assistant" element={<AIAssistant />} />
+      <Route path="/weather" element={<Weather />} />
 
-      <Route
-        path="/dashboard"
-        element={<Dashboard />}
-      />
+      {/*Disease Detection*/}
+      <Route path="/disease-detection" element={<DiseaseDetection />}/>
+      
 
-      <Route
-        path="/buyer-dashboard"
-        element={<BuyerDashboard />}
-      />
+      {/* Information */}
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
 
-      <Route
-        path="/my-orders"
-        element={<MyOrders />}
-      />
+      {/* Authentication */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
-      <Route
-        path="/farmer-orders"
-        element={<FarmerOrders />}
-      />
+      {/* 404 */}
+      <Route path="*" element={<NotFound />} />
 
-      <Route
-        path="/product/:id"
-        element={<ProductDetails />}
-      />
-
-
-      <Route
-        path="/cart"
-        element={<Cart />}
-      />
-
-      <Route
-        path="/checkout"
-        element={<Checkout />}
-      />
-
-      <Route
-        path="/analytics"
-        element={<Analytics />}
-      />
-
-      <Route
-        path="/weather"
-        element={<Weather />}
-      />
-
-      <Route
-        path="/ai-assistant"
-        element={<AIAssistant />}
-      />
-
-      <Route
-        path="/admin"
-        element={<AdminDashboard />}
-      />
     </Routes>
   );
 }

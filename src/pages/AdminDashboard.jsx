@@ -5,10 +5,10 @@ function AdminDashboard() {
   const [stats, setStats] = useState({});
 
   useEffect(() => {
-    loadStats();
+    fetchStats();
   }, []);
 
-  const loadStats = async () => {
+  const fetchStats = async () => {
     const { data } = await axios.get(
       "http://localhost:5000/api/admin/stats"
     );
@@ -17,35 +17,39 @@ function AdminDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-
+    <div className="p-8">
       <h1 className="text-4xl font-bold mb-8">
-        👨‍💼 Admin Dashboard
+        Admin Dashboard
       </h1>
 
-      <div className="grid md:grid-cols-3 gap-6">
-
-        <div className="bg-blue-500 text-white p-6 rounded-xl">
-          <h2>Total Users</h2>
-          <h1 className="text-4xl">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="bg-white shadow rounded-xl p-6">
+          <h3>Users</h3>
+          <p className="text-3xl font-bold">
             {stats.users}
-          </h1>
+          </p>
         </div>
 
-        <div className="bg-green-500 text-white p-6 rounded-xl">
-          <h2>Total Products</h2>
-          <h1 className="text-4xl">
+        <div className="bg-white shadow rounded-xl p-6">
+          <h3>Products</h3>
+          <p className="text-3xl font-bold">
             {stats.products}
-          </h1>
+          </p>
         </div>
 
-        <div className="bg-purple-500 text-white p-6 rounded-xl">
-          <h2>Total Orders</h2>
-          <h1 className="text-4xl">
+        <div className="bg-white shadow rounded-xl p-6">
+          <h3>Orders</h3>
+          <p className="text-3xl font-bold">
             {stats.orders}
-          </h1>
+          </p>
         </div>
 
+        <div className="bg-white shadow rounded-xl p-6">
+          <h3>Revenue</h3>
+          <p className="text-3xl font-bold">
+            ₹{stats.revenue}
+          </p>
+        </div>
       </div>
     </div>
   );

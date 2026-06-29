@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function Cart() {
+  <nav className="sticky top-0 backdrop-blur-md bg-white/80 border-b"></nav>
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
