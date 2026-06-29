@@ -41,7 +41,7 @@ function Dashboard() {
   const fetchProducts = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/products"
+        "https://farmtech-s0md.onrender.com/api/products"
       );
 
       setProducts(data);
@@ -63,7 +63,7 @@ function Dashboard() {
       setUploading(true);
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/upload",
+        "https://farmtech-s0md.onrender.com/api/upload",
         formData,
         {
           headers: {
@@ -95,7 +95,7 @@ function Dashboard() {
     try {
       if (editingId) {
         await axios.put(
-          `http://localhost:5000/api/products/${editingId}`,
+          `https://farmtech-s0md.onrender.com/api/products/${editingId}`,
           product
         );
 
@@ -104,7 +104,7 @@ function Dashboard() {
         setEditingId(null);
       } else {
         await axios.post(
-          "http://localhost:5000/api/products",
+          "https://farmtech-s0md.onrender.com/api/products",
           {
             ...product,
             farmer: user._id,
@@ -160,7 +160,7 @@ function Dashboard() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/products/${id}`
+        `https://farmtech-s0md.onrender.com/api/products/${id}`
       );
 
       fetchProducts();

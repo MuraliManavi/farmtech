@@ -10,7 +10,7 @@ function Checkout() {
 
   const loadCart = async () => {
     const { data } = await axios.get(
-      "http://localhost:5000/api/cart"
+      "https://farmtech-s0md.onrender.com"
     );
 
     setCart(data);
@@ -23,7 +23,7 @@ function Checkout() {
 
     for (const item of cart) {
       await axios.post(
-        "http://localhost:5000/api/orders",
+        "https://farmtech-s0md.onrender.com",
         {
           buyer: user._id,
           farmer: item.product.farmer,
@@ -41,7 +41,7 @@ function Checkout() {
 
   const makePayment = async () => {
   const { data } = await axios.post(
-    "http://localhost:5000/api/payment/create-order",
+    "https://farmtech-s0md.onrender.com/api/payment/create-order",
     {
       amount: total,
     }

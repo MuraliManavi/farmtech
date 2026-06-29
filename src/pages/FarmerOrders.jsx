@@ -10,7 +10,7 @@ function FarmerOrders() {
 
   const fetchOrders = async () => {
     const { data } = await axios.get(
-      "http://localhost:5000/api/orders"
+      "https://farmtech-s0md.onrender.com/api/orders"
     );
 
     setOrders(data);
@@ -19,7 +19,7 @@ function FarmerOrders() {
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/orders/${id}`,
+        `https://farmtech-s0md.onrender.com/api/orders/${id}`,
         { status }
       );
 

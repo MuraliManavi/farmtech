@@ -29,7 +29,7 @@ function Marketplace() {
       setLoading(true);
 
       const { data } = await axios.get(
-        "http://localhost:5000/api/products"
+        "https://farmtech-s0md.onrender.com/api/products"
       );
 
       setProducts(data);

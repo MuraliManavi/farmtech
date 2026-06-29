@@ -44,7 +44,7 @@ function AIAssistant() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/ai/ask",
+        "https://farmtech-s0md.onrender.com",
         {
           question: userMessage,
         }

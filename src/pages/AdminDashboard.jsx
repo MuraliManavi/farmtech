@@ -10,7 +10,7 @@ function AdminDashboard() {
 
   const fetchStats = async () => {
     const { data } = await axios.get(
-      "http://localhost:5000/api/admin/stats"
+      "https://farmtech-s0md.onrender.com"
     );
 
     setStats(data);

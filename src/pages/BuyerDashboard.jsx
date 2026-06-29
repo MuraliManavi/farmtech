@@ -11,7 +11,7 @@ function BuyerDashboard() {
   const fetchProducts = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/products"
+        "https://farmtech-s0md.onrender.com"
       );
 
     console.log("Products:", data);
@@ -29,7 +29,7 @@ function BuyerDashboard() {
     );
 
     await axios.post(
-      "http://localhost:5000/api/orders",
+      "https://farmtech-s0md.onrender.com",
       {
         buyer: user._id,
         productId: product._id,

@@ -13,7 +13,7 @@ function MyOrders() {
   const fetchOrders = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/orders"
+        "https://farmtech-s0md.onrender.com/api/orders"
       );
 
       const myOrders = data.filter(

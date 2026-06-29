@@ -46,7 +46,7 @@ function DiseaseDetection() {
       setLoading(true);
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/disease/detect",
+        "https://farmtech-s0md.onrender.com/api/disease/detect",
         formData,
         {
           headers: {

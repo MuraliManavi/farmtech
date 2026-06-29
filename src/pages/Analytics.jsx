@@ -10,7 +10,7 @@ function Analytics() {
 
   const loadAnalytics = async () => {
     const { data } = await axios.get(
-      "http://localhost:5000/api/analytics"
+      "https://farmtech-s0md.onrender.com"
     );
 
     setStats(data);

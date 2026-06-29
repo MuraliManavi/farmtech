@@ -11,7 +11,7 @@ function Cart() {
 
   const loadCart = async () => {
     const { data } = await axios.get(
-      "http://localhost:5000/api/cart"
+      "https://farmtech-s0md.onrender.com"
     );
 
     setCart(data);
@@ -19,7 +19,7 @@ function Cart() {
 
   const removeItem = async (id) => {
     await axios.delete(
-      `http://localhost:5000/api/cart/${id}`
+      `https://farmtech-s0md.onrender.com/api/cart/${id}`
     );
 
     loadCart();

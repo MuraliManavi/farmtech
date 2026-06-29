@@ -25,7 +25,7 @@ function Weather() {
       setLoading(true);
 
       const { data } = await axios.get(
-        `http://localhost:5000/api/weather/${city}`
+        `https://farmtech-s0md.onrender.com/api/weather/${city}`
       );
 
       setWeather(data.data);
@@ -52,7 +52,7 @@ function Weather() {
           const { latitude, longitude } = position.coords;
 
           const { data } = await axios.get(
-            `http://localhost:5000/api/weather/${latitude},${longitude}`
+            `https://farmtech-s0md.onrender.com/api/weather/${latitude},${longitude}`
           );
 
           setWeather(data.data);

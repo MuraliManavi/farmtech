@@ -26,7 +26,7 @@ function ProductDetails() {
   const fetchProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:5000/api/products/${id}`
+        `https://farmtech-s0md.onrender.com/api/products/${id}`
       );
 
       setProduct(data);
