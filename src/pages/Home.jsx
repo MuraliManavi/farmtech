@@ -146,6 +146,18 @@ function Home() {
 
                 <p>₹65 / kg</p>
               </div>
+
+              <Link
+                to="/assistant"
+                className="mt-12 inline-flex items-center gap-3 rounded-2xl bg-white px-8 py-4 font-bold text-green-700 transition hover:scale-105"
+              >
+
+                Talk To AI
+
+                <FaArrowRight />
+
+              </Link>
+
             </div>
 
             <div className="shadow-lg rounded-xl overflow-hidden">
